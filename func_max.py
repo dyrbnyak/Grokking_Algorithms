@@ -17,6 +17,13 @@ def Max(list):
     if len(list) < 2:
         return list[0]
     else:
-        return Max(list[1:]) if Max(list[1:]) > list[0] else list[0]
+        maximum = Max(list[1:]) 
+        return maximum if maximum > list[0] else list[0]
+    
+'''
+Изначально я написал без использования переменной максимум, но это непотимально, 
+
+так как рекурсия лишних два раза. Грамотнее приземлить данные
+'''
 
 print(Max([4,2,5,1,3,99]))

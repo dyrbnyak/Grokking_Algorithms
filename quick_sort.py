@@ -17,7 +17,7 @@
 
 множество, которое меньше + опорная точка + множество, которое больше
 
-O(n)
+O(log n)
 '''
 
 
@@ -28,6 +28,7 @@ def quicksort(list):
         pivot = list[0] # pivot - опорная точка
         less = [i for i in list[1:] if i <= pivot]
         greater = [i for i in list[1:] if i > pivot]
-        return quicksort(less) + [pivot] + quicksort(greater)
+        return quicksort(less) + [pivot] + quicksort(greater) # pivot требуется обрамить квадратными скобками, 
+                                                              #так как число и списко складывать нельзя
     
 print(quicksort([5,2,3,12,7,2,21,5,9,3452,2,]))
